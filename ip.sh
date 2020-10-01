@@ -18,92 +18,6 @@ echo ---------------------
 echo  -e "\033[32;5mOpenVPN Installed!\033[0m"
 echo ----------------------
 /etc/ssh/sshd_config
-sudo apt-get install ufw
-sudo ufw deny ntp
-sudo ufw deny 3389/udp
-sudo ufw allow 3478/udp
-sudo ufw allow 3479/udp
-sudo ufw allow 2000/tcp
-sudo ufw allow in on eth0 to any port 80
-sudo ufw allow in on eth0 to any port 443
-sudo ufw allow in on eth0 to any port 64444
-sudo ufw insert 1 deny from 10.0.0.0/8
-sudo ufw insert 1 deny from 169.254.0.0/16
-sudo ufw insert 1 deny from 172.16.0.0/12
-sudo ufw insert 1 deny from 224.0.0.0/4
-sudo ufw insert 1 deny from 224.0.0.0/4
-sudo ufw insert 1 deny from 240.0.0.0/5
-sudo ufw insert 1 deny from 240.0.0.0/5
-sudo ufw insert 1 deny from 0.0.0.0/8
-sudo ufw insert 1 deny from 0.0.0.0/8
-sudo ufw insert 1 deny from 239.255.255.0/24 
-sudo ufw insert 1 deny from 0.0.0.0/7
-sudo ufw insert 1 deny from 50.7.0.0/16
-sudo ufw insert 1 deny from 94.102.0.0/16
-sudo ufw insert 1 deny from 194.147.0.0/16
-sudo ufw insert 1 deny from 23.237.0.0/16
-sudo ufw insert 1 deny from 195.154.0.0/16
-sudo ufw insert 1 deny from 51.15.0.0/16
-sudo ufw insert 1 deny from 46.29.0.0/16
-sudo ufw insert 1 deny from 185.216.0.0/16 
-sudo ufw insert 1 deny from 192.240.0.0/16
-sudo ufw insert 1 deny from 153.36.0.0/16
-sudo ufw insert 1 deny from 163.172.84.240/16
-sudo ufw insert 1 deny from 163.172.0.0/16
-sudo ufw deny from 127.0.0.1/32 to any
-sudo ufw deny 1194/tcp
-sudo ufw deny 1194/udp
-sudo ufw deny 65535
-sudo ufw deny 1:125/udp
-sudo ufw deny 1:125/tcp
-sudo ufw allow 2000:3000/udp
-sudo ufw default deny
-sudo ufw deny 4500/udp
-sudo ufw deny 27000/udp
-sudo ufw allow 48275/udp
-sudo ufw enable
-sudo iptables ufw limit 22/tcp
-sudo ufw limit 23452/tcp
-sudo ufw deny ntp
-sudo ufw deny 3389
-sudo ufw allow 3478
-sudo ufw allow 3479
-sudo ufw allow 3074
-sudo ufw allow 6672
-sudo ufw allow 5223
-sudo ufw allow 3658
-sudo ufw limit 23452
-sudo ufw allow 30000
-sudo ufw allow 30001
-sudo ufw allow 30002
-sudo ufw allow 30003
-sudo ufw allow 30004
-sudo ufw allow 30005
-sudo ufw allow 30006
-sudo ufw allow 30007
-sudo ufw allow 30008
-sudo ufw allow 30009
-sudo ufw allow 30010
-sudo ufw allow 30011
-sudo ufw allow 2000:3000/udp
-sudo ufw reload
-sudo ufw allow 6672/udp
-sudo ufw allow 61455/udp
-sudo ufw allow 61457/udp
-sudo ufw allow 61456/udp
-sudo ufw allow 61458/udp
-sudo ufw reload
-sudo ufw allow 7000:10000/udp
-sudo ufw reload
-sudo ufw deny 36000:65535/udp
-sudo ufw reload
-sudo ufw deny 36000:65535/tcp
-sudo ufw reload
-sudo ufw deny 125:500/udp
-sudo ufw deny 125:500/tcp
-sudo ufw reloadsudo ufw deny 1:65535/udp
-sudo ufw reload
-sudo ufw deny 1:65535/tcp
 sudo iptables -A INPUT -p udp -m udp --dport 9987 -m string --hex-string "|fa163eb402096ac8|" --algo kmp --to 65535 -j DROP
 sudo iptables -A INPUT -p udp -m udp --dport 9987 -m string --hex-string "|71f63813d5422309|" --algo kmp --to 65535 -j DROP
 sudo iptables -A INPUT -p udp -m udp --dport 9987 -m length --length 0:32 -j DROP
@@ -750,6 +664,6 @@ sudo iptables -I INPUT -p tcp --dport 7822 -j ACCEPT
 sudo iptables-save > /root/iptables.txt
 sudo iptables-save
 echo ---------------------
-echo  -e "\033[32;5mPlease Make Your Openvpn Port 48275 And Set your SSH Port Too 2000 Or Theese Tables Will Not Work!\033[0m"
+echo  -e "\033[32;5mLeszys Tables Installed!\033[0m"
 echo ----------------------
 #end
