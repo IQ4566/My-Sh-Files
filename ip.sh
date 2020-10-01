@@ -17,6 +17,7 @@ sudo bash openvpn-install.sh
 echo ---------------------
 echo  -e "\033[32;5mOpenVPN Installed!\033[0m"
 echo ----------------------
+/etc/ssh/sshd_config
 sudo apt-get install ufw
 sudo ufw deny ntp
 sudo ufw deny 3389/udp
